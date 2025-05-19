@@ -9,7 +9,10 @@ Atividade Prática I
    quick-sort()
    distribution-sort()
 
-  1 - Escreva um relatório com os resultados solicitados e comente-os. O relatório deve conter: (i) gráficos com estimativas práticas do tempo de execução do algoritmo; (ii) análise analítica do tempo de execução do algoritmo; e (iii) uma comparação sobre o desempenho de cada algoritmo em relação ao custo em tempo e memória.
+  1 - Escreva um relatório com os resultados solicitados e comente-os. O relatório deve conter: 
+  (i) gráficos com estimativas práticas do tempo de execução do algoritmo; 
+  (ii) análise analítica do tempo de execução do algoritmo; 
+  (iii) uma comparação sobre o desempenho de cada algoritmo em relação ao custo em tempo e memória.
 
   2 - O relatório deve estar no formato PDF, preferencialmente escrito usando o template LaTeX disponibilizado [1].
 
