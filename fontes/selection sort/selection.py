@@ -5,26 +5,26 @@ import time
 def selection_sort(arr):
     n = len(arr)
     for i in range(n - 1):
-        min_idx = i
+        min_index = i
         for j in range(i + 1, n):
-            if arr[j] < arr[min_idx]:
-                min_idx = j
-        if min_idx != i:
-            arr[i], arr[min_idx] = arr[min_idx], arr[i]
+            if arr[j] < arr[min_index]:
+                min_index = j
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
     return arr
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Uso: python seu_script.py <tamanho_do_array>")
+        print(f"Uso: python {sys.argv[0]} <tamanho_do_array>", file=sys.stderr)
         sys.exit(1)
 
     try:
         n = int(sys.argv[1])
         if n < 0:
-            print("O tamanho do array não pode ser negativo.")
+            print("O tamanho do array não pode ser negativo.", file=sys.stderr)
             sys.exit(1)
     except ValueError:
-        print("O tamanho do array deve ser um número inteiro.")
+        print("O tamanho do array deve ser um número inteiro.", file=sys.stderr)
         sys.exit(1)
 
     if n == 0:
