@@ -1,7 +1,7 @@
   Atividade Prática I
 
     Desenvolva uma tarefa de análise de algoritmos associados ao problema de ordenação. 
-    Considerem:
+  
     selection-sort()
     insertion-sort()
     merge-sort()

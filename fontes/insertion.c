@@ -1,35 +1,52 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-void insertion_sort(int v[], int n) {
-    int e, i, temp;
-    for (e = 1; e < n; e++) {
-        i = e;
-        while (i > 0 && v[i - 1] > v[i]) {
-            temp = v[i];
-            v[i] = v[i - 1];
-            v[i - 1] = temp;
-            i = i - 1;
-        }
-    }
-}
+void insertion_sort(int *v, int tamanho);
 
-int main() {
-    int vetor[] = {5, 2, 8, 1, 9, 4};
-    int n = sizeof(vetor) / sizeof(vetor[0]);
+int main(int argc, char **argv)
+{
+    struct timespec a, b;
+    unsigned long t;
+    unsigned int n = atoi(argv[1]);
+    int *vetor = (int *)malloc(n * sizeof(int));
 
-    printf("Vetor antes da ordenação: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", vetor[i]);
-    }
-    printf("\n");
+    for (int i = 0; i < n; i++)
+        vetor[i] = i;
+
+    clock_gettime(CLOCK_MONOTONIC, &b);
 
     insertion_sort(vetor, n);
 
-    printf("Vetor depois da ordenação: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", vetor[i]);
-    }
-    printf("\n");
+    clock_gettime(CLOCK_MONOTONIC, &a);
+
+    t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
+    
+    printf("%lu\n", t);
+    
+    free(vetor);
 
     return 0;
 }
+
+void insertion_sort(int *v, int tamanho)
+{
+    int i, e;
+    int auxiliar;
+
+    for(e = 1; e < tamanho; e++)
+    {
+        auxiliar = v[e];
+        i = e - 1; 
+
+        while(i >= 0 && v[i] > auxiliar)
+        {
+            v[i + 1] = v[i];
+            i = i - 1;
+        }
+
+        v[i + 1] = auxiliar;
+    }
+}
+
+
