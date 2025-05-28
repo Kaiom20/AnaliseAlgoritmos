@@ -22,6 +22,3 @@
     5 - Se você desenvolver utilizando alguma IDE, garanta que seu código funcione sem ela. Por exemplo, se utilizar Java, que seu código não dependa no NetBeans ou Eclipse para ser compilado e executado. Nesse caso, usem apenas o disponível na JDK.
 
     6 - Envie tudo em um arquivo formato ZIP (não use RAR ou qualquer outro formato), o relatório deve ser nomeado `relatorio-1.pdf'. Não use acentos nem espaços nos nomes dos arquivos. Os códigos devem estar em uma pasta denominada "fontes". Os arquivos com os tempos de execução e gráficos devem estar em uma pasta denominada "graficos". Preferenciamente, gere gráficos no formato PNG.
-
-  [1] https://github.com/labepi/templates
-  [2] http://www.gnuplot.info/
