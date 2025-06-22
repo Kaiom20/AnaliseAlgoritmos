@@ -8,7 +8,7 @@ def merge(v, s, m, e):
     q = m + 1
     
     w_size = e - s + 1
-    if w_size <= 0: # Caso de segmento vazio ou inválido
+    if w_size <= 0: 
         return
     w = [0] * w_size
 
